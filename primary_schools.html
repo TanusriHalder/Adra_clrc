@@ -136,10 +136,149 @@
                 margin-bottom: 10px
             }
         }
+        /* ===== NIC NAVBAR STYLE ===== */
+
+.navbar {
+    background-color: #003366;
+    border-bottom: 3px solid #ff9933;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navitem {
+    position: relative;
+}
+
+.navitem button {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 12px 16px;
+    cursor: pointer;
+}
+
+.navitem button:hover,
+.navitem button:focus {
+    background-color: #002244;
+    outline: 2px solid #ff9933;
+}
+
+/* Dropdown menu */
+.menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    min-width: 200px;
+    border: 1px solid #cccccc;
+    z-index: 1000;
+}
+
+.menu a {
+    display: block;
+    padding: 10px 14px;
+    color: #003366;
+    text-decoration: none;
+    font-size: 14px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.menu a:hover,
+.menu a:focus {
+    background-color: #e9f2ff;
+    outline: none;
+}
+
+/* Show dropdown on hover and keyboard focus */
+.navitem:hover .menu,
+.navitem:focus-within .menu {
+    display: block;
+}
+
+/* Mobile stacking */
+@media (max-width: 900px) {
+    .navbar {
+        flex-direction: column;
+    }
+    .menu {
+        position: static;
+        border: none;
+    }
+}
+
     </style>
 </head>
 
 <body>
+    <!-- NAV -->
+<nav class="navbar" aria-label="Main navigation">
+
+  <div class="navitem">
+    <button type="button" aria-haspopup="true" aria-expanded="false">
+      Home
+    </button>
+    <div class="menu"  >
+      <a href="welcome.html">Welcome</a>
+      <a href="objective.html">Objectives</a>
+    </div>
+  </div>
+
+  <div class="navitem">
+    <button type="button" aria-haspopup="true" aria-expanded="false">
+      About
+    </button>
+    <div class="menu"  >
+      <a href="office.html">Office</a>
+      <a href="jurisdiction.html">Jurisdiction</a>
+    </div>
+  </div>
+
+  <div class="navitem">
+    <button type="button" aria-haspopup="true" aria-expanded="false">
+      Staff
+    </button>
+    <div class="menu"  >
+      <a href="sis.html">SIS</a>
+      <a href="office_staff.html">Office Staff</a>
+    </div>
+  </div>
+
+  <div class="navitem">
+    <button type="button" aria-haspopup="true" aria-expanded="false">
+      Schools
+    </button>
+    <div class="menu"  >
+      <a href="high_schools.html">High Schools</a>
+      <a href="primary_schools.html">Primary Schools</a>
+    </div>
+  </div>
+
+  <div class="navitem">
+    <button type="button" aria-haspopup="true" aria-expanded="false">
+      Gallery
+    </button>
+    <div class="menu"  >
+      <a href="photos.html">Photos</a>
+      <a href="events.html">Events</a>
+    </div>
+  </div>
+
+  <div class="navitem">
+    <button type="button" aria-haspopup="true" aria-expanded="false">
+      Forms
+    </button>
+    <div class="menu"  >
+      <a href="forms.html">Teacher Form</a>
+      <a href="leave_application.html">Leave Application</a>
+    </div>
+  </div>
+
+</nav>
     <header>
         <div class="header-inner">
             <img src="emblem.png" alt="State Emblem of India" class="emblem">
@@ -176,5 +315,6 @@
         © 2026 Office of the Sub Inspector of Schools, Adra<br>School Education Department, Government of West Bengal
     </footer>
 </body>
+
 
 </html>

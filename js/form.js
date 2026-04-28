@@ -4,10 +4,10 @@ document.getElementById("teacherForm").addEventListener("submit", function(e){
     e.preventDefault();
 
     const entry = {
-        name: name.value,
-        school: school.value,
-        designation: designation.value,
-        mobile: mobile.value
+       name: document.getElementById("name").value,
+        school: document.getElementById("school").value,
+        designation: document.getElementById("designation").value,
+        mobile: document.getElementById("mobile").value
     };
 
     records.push(entry);
